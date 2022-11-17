@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="../backend/img/ico.png" />
 
         <!-- Title -->
-        <title>Hotel "MI CIELO" | 404</title>
+        <title>Hotel Casa de Piedra" | 404</title>
         
 
         <!-- Font for coming soon page -->
@@ -42,8 +42,8 @@
 
         <div class="error-screen">
             <h1>404</h1>
-            <h5>We're sorry!<br>The page you have requested cannot be found.</h5>
-            <a href="login.php" class="btn btn-primary">Go back to Dashboard</a>
+            <h5>¡Lo sentimos!<br>No se puede encontrar la página que ha solicitado.</h5>
+            <a href="login.php" class="btn btn-primary">Volver al Panel de control</a>
         </div>
 
         <!--**************************

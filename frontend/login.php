@@ -6,7 +6,7 @@ include_once '../backend/php/login.php'
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel "MI CIELO"</title>
+    <title>Hotel Casa de Piedra"</title>
     <link rel="stylesheet" href="../backend/css/style.css">
     <link rel="icon" type="image/png" href="../backend/img/ico.png">
     
@@ -23,7 +23,7 @@ include_once '../backend/php/login.php'
                    <div class="form-head">
                     <form autocomplete="off" method="post"  role="form">
                        <div class="title">
-                           Hotel "MI CIELO"
+                           Hotel Casa de Piedra"
                        </div>
                        <?php 
                             if (isset($errMsg)) {

@@ -15,7 +15,7 @@ class PDF extends FPDF
     $this->setY(12);
     $this->setX(10);
     
-    $this->Image('../../backend/img/rt.png',25,5,33);
+    $this->Image('../../backend/img/logo.jpeg',25,5,33);
     
     $this->SetFont('times', 'B', 13);
     

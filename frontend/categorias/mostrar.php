@@ -18,7 +18,7 @@
 		<link rel="shortcut icon" href="../../backend/img/ico.png" />
 
 		<!-- Title -->
-		<title>Categorias | Hotel "MI CIELO"</title>
+		<title>Categorias | Hotel Casa de Piedra"</title>
 
 
 		<!-- *************
@@ -43,7 +43,7 @@
 		<!-- Loading starts -->
 		<div id="loading-wrapper">
 			<div class="spinner-border" role="status">
-				<span class="sr-only">Loading...</span>
+				<span class="sr-only">Cargando...</span>
 			</div>
 		</div>
 		<!-- Loading ends -->
@@ -58,7 +58,7 @@
 				<!-- Sidebar brand start  -->
 				<div class="sidebar-brand">
 					<a href="../administrador/escritorio.php" class="logo">
-						<img src="../../backend/img/rt.png" alt="Hotel mi cielo" />
+						<img src="../../backend/img/logo.jpeg" alt="Hotel mi cielo" />
 					</a>
 				</div>
 				<!-- Sidebar brand end  -->
@@ -73,12 +73,12 @@
 							<li class="sidebar-dropdown">
 								<a href="#">
 									<i class="icon-devices_other"></i>
-									<span class="menu-text">Dashboards</span>
+									<span class="menu-text">Panel</span>
 								</a>
 								<div class="sidebar-submenu">
 									<ul>
 										<li>
-											<a href="../administrador/escritorio.php">Admin Dashboard</a>
+											<a href="../administrador/escritorio.php">Admin Panel</a>
 										</li>
 										
 									</ul>
@@ -227,10 +227,10 @@
 					</div>
 					<div class="header-items">
 						<!-- Custom search start -->
-						<div class="custom-search">
+						<!-- <div class="custom-search">
 							<input type="text" class="search-query" placeholder="Search here ...">
 							<i class="icon-search1"></i>
-						</div>
+						</div> -->
 						<!-- Custom search end -->
 
 						<!-- Header actions start -->
@@ -241,7 +241,7 @@
 								<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
 									<span class="user-name"><?php echo $_SESSION['nombre']; ?></span>
 									<span class="avatar">
-										<img src="../../backend/img/user24.png" alt="avatar">
+										<img src="../../backend/img/logo.jpeg" alt="avatar">
 										<span class="status busy"></span>
 									</span>
 								</a>
@@ -249,9 +249,9 @@
 									<div class="header-profile-actions">
 										<div class="header-user-profile">
 											<div class="header-user">
-												<img src="../../backend/img/user24.png" alt="Admin Template">
+												<img src="../../backend/img/logo.jpeg" alt="Admin Template">
 											</div>
-											<h5>Julie Sweet</h5>
+											<h5>Jaime Hernandez</h5>
 											<p>Admin</p>
 										</div>
 										<a href="../perfil/mostrar.php"><i class="icon-user1"></i> Mi Perfil</a>

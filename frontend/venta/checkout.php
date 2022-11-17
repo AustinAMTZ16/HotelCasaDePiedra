@@ -18,7 +18,7 @@
 		<link rel="shortcut icon" href="../../backend/img/ico.png" />
 
 		<!-- Title -->
-		<title>Finalizar compra | Hotel "MI CIELO"</title>
+		<title>Finalizar compra | Hotel Casa de Piedra"</title>
 
 
 		<!-- *************
@@ -61,7 +61,7 @@
 				<!-- Sidebar brand start  -->
 				<div class="sidebar-brand">
 					<a href="../administrador/escritorio.php" class="logo">
-						<img src="../../backend/img/rt.png" alt="Hotel mi cielo" />
+						<img src="../../backend/img/logo.jpeg" alt="Hotel mi cielo" />
 					</a>
 				</div>
 				<!-- Sidebar brand end  -->
@@ -230,10 +230,10 @@
 					</div>
 					<div class="header-items">
 						<!-- Custom search start -->
-						<div class="custom-search">
+						<!-- <div class="custom-search">
 							<input type="text" class="search-query" placeholder="Search here ...">
 							<i class="icon-search1"></i>
-						</div>
+						</div> -->
 						<!-- Custom search end -->
 
 						<!-- Header actions start -->
@@ -243,7 +243,7 @@
 								<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
 									<span class="user-name"><?php echo $_SESSION['nombre']; ?></span>
 									<span class="avatar">
-										<img src="../../backend/img/user24.png" alt="avatar">
+										<img src="../../backend/img/logo.jpeg" alt="avatar">
 										<span class="status busy"></span>
 									</span>
 								</a>
@@ -251,7 +251,7 @@
 									<div class="header-profile-actions">
 										<div class="header-user-profile">
 											<div class="header-user">
-												<img src="../../backend/img/user24.png" alt="Admin Template">
+												<img src="../../backend/img/logo.jpeg" alt="Admin Template">
 											</div>
 											<h5>Julie Sweet</h5>
 											<p>Admin</p>
