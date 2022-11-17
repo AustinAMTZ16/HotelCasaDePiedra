@@ -11,7 +11,7 @@ if(!isset($_SESSION))
 // define('dbname', 'u115254492_sistemahotel');
 
 // Define database DESARROLLO QA
-define('dbhost', '45.89.204.4');
+define('dbhost', 'localhost');
 define('dbuser', 'u115254492_casapiedraQA');
 define('dbpass', 'CasaDePidra22');
 define('dbname', 'u115254492_sistemahotelQA');
