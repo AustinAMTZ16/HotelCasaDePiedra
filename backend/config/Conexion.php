@@ -4,11 +4,23 @@ if(!isset($_SESSION))
         session_start(); 
     }
 
-// Define database
-define('dbhost', 'localhost');
-define('dbuser', 'root');
-define('dbpass', '');
-define('dbname', 'sistemahotel');
+// Define database PRODUCTIVO
+// define('dbhost', '45.89.204.4');
+// define('dbuser', 'u115254492_casapiedra');
+// define('dbpass', 'CasaDePidra22');
+// define('dbname', 'u115254492_sistemahotel');
+
+// Define database DESARROLLO QA
+define('dbhost', '45.89.204.4');
+define('dbuser', 'u115254492_casapiedraQA');
+define('dbpass', 'CasaDePidra22');
+define('dbname', 'u115254492_sistemahotelQA');
+
+// Define database LOCAL
+// define('dbhost', 'localhost');
+// define('dbuser', 'root');
+// define('dbpass', '');
+// define('dbname', 'sistemahotel');
 
 // Connecting database
 try {
