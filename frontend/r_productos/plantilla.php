@@ -15,7 +15,7 @@ $this->SetY(40);
 $this->SetX(245);
 $this->SetFont('Arial','B',12);
 $this->SetTextColor(246, 130, 14);
-$this->Cell(150, 8, 'Hotel MI CIELO',0,1);
+$this->Cell(150, 8, 'Hotel Casa de Piedra',0,1);
 
 $this->SetY(45);
 $this->SetX(247);
@@ -34,7 +34,7 @@ function Footer()
         $this->Cell(95,5,utf8_decode('Página ').$this->PageNo().' / {nb}',0,0,'L');
         $this->Cell(180,5,date('d/m/Y | g:i:a') ,00,1,'R');
         $this->Line(10,287,200,287);
-        $this->Cell(0,5,utf8_decode("Hotel MI CIELO © Todos los derechos reservados."),0,0,"C");
+        $this->Cell(0,5,utf8_decode("Hotel Casa de Piedra © Todos los derechos reservados."),0,0,"C");
         
 }
 }
