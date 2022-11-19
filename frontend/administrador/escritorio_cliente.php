@@ -7,7 +7,7 @@
 
     header("Location: ../login.php");
   } else {
-    require '../template/header.php';
+    require '../template/header_cliente.php';
 
     if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
 ?>
@@ -24,7 +24,7 @@
     //require '../erro404.php';
   }
 
-  require '../template/footer.php';
+  require '../template/footer_cliente.php';
   ?>
 
 <?php

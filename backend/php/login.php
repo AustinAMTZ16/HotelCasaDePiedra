@@ -42,6 +42,8 @@ $stmt = $connect->prepare('SELECT id, nombre, correo, usuario,contra, rol FROM u
             
     if($_SESSION['rol'] == 1){
           header('Location: administrador/escritorio.php');
+        }else if($_SESSION['rol'] == 2){
+          header('Location: administrador/escritorio_cliente.php');
         }
             exit;
           }
@@ -54,4 +56,3 @@ $stmt = $connect->prepare('SELECT id, nombre, correo, usuario,contra, rol FROM u
       }
     }
   }
- ?>

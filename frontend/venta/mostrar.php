@@ -159,9 +159,9 @@
 										<li>
 											<a href="../r_recepcion/mostrar.php">Recepción</a>
 										</li>
-										<li>
+										<!-- <li>
 											<a href="../r_productos/mostrar.php">Productos</a>
-										</li>
+										</li> -->
 										
 										
 									</ul>

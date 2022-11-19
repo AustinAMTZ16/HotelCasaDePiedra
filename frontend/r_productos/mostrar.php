@@ -107,7 +107,7 @@
 							</li>
 
 
-							<li class="sidebar-dropdown">
+							<!-- <li class="sidebar-dropdown">
 								<a href="#">
 									<i class="icon-archive"></i>
 									<span class="menu-text">Tienda</span>
@@ -126,7 +126,7 @@
 										
 									</ul>
 								</div>
-							</li>
+							</li> -->
 
 							<li class="sidebar-dropdown">
 								<a href="#">

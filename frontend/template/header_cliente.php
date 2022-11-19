@@ -61,21 +61,7 @@
 				<div class="sidebar-menu">
 					<ul>
 						<li class="header-menu">General</li>
-						<li class="sidebar-dropdown active">
-							<a href="#">
-								<i class="icon-devices_other"></i>
-								<span class="menu-text">Dashboards</span>
-							</a>
-							<div class="sidebar-submenu">
-								<ul>
-									<li>
-										<a href="../administrador/escritorio.php" class="current-page">Admin Dashboard</a>
-									</li>
-
-								</ul>
-							</div>
-						</li>
-
+						
 						<li class="sidebar-dropdown">
 							<a href="#">
 								<i class="icon-briefcase"></i>
@@ -95,68 +81,6 @@
 						</li>
 
 
-						<!-- <li class="sidebar-dropdown">
-								<a href="#">
-									<i class="icon-archive"></i>
-									<span class="menu-text">Tienda</span>
-								</a>
-								<div class="sidebar-submenu">
-									<ul>
-										<li>
-											<a href="../venta/mostrar.php">Vender</a>
-										</li>
-										<li>
-											<a href="../productos/mostrar.php">Productos</a>
-										</li>
-										<li>
-											<a href="../categorias/mostrar.php">Categorias</a>
-										</li>
-										
-									</ul>
-								</div>
-							</li> -->
-
-						<li class="sidebar-dropdown">
-							<a href="#">
-								<i class="icon-settings1"></i>
-								<span class="menu-text">Mantenimieto</span>
-							</a>
-							<div class="sidebar-submenu">
-								<ul>
-									<li>
-										<a href="../habitacion/mostrar.php">Habitación</a>
-									</li>
-									<li>
-										<a href="../h_categoria/mostrar.php">Categoria</a>
-									</li>
-									<li>
-										<a href="../pisos/mostrar.php">Pisos</a>
-									</li>
-
-								</ul>
-							</div>
-						</li>
-
-						<li class="sidebar-dropdown">
-							<a href="#">
-								<i class="icon-bar-chart"></i>
-								<span class="menu-text">Reportes</span>
-							</a>
-							<div class="sidebar-submenu">
-								<ul>
-									<li>
-										<a href="../r_recepcion/mostrar.php">Recepción</a>
-									</li>
-									<!-- <li>
-											<a href="../r_productos/mostrar.php">Productos</a>
-										</li> -->
-
-
-								</ul>
-							</div>
-						</li>
-
-
 						<li class="sidebar-dropdown">
 							<a href="#">
 								<i class="icon-user1"></i>
@@ -164,9 +88,6 @@
 							</a>
 							<div class="sidebar-submenu">
 								<ul>
-									<li>
-										<a href="../usuarios/mostrar.php">Usuarios</a>
-									</li>
 									<li>
 										<a href="../clientes/mostrar.php">Clientes</a>
 									</li>

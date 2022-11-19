@@ -101,7 +101,7 @@
 							</li>
 
 
-							<li class="sidebar-dropdown active">
+							<!-- <li class="sidebar-dropdown active">
 								<a href="#">
 									<i class="icon-archive"></i>
 									<span class="menu-text">Tienda</span>
@@ -120,7 +120,7 @@
 										
 									</ul>
 								</div>
-							</li>
+							</li> -->
 
 							<li class="sidebar-dropdown">
 								<a href="#">
@@ -153,9 +153,9 @@
 										<li>
 											<a href="../r_recepcion/mostrar.php">Recepción</a>
 										</li>
-										<li>
+										<!-- <li>
 											<a href="../r_productos/mostrar.php">Productos</a>
-										</li>
+										</li> -->
 										
 										
 									</ul>
