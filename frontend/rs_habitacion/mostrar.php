@@ -356,10 +356,10 @@ if (!isset($_SESSION['rol'])) {
 														</select>
 													</div>
 
-													<div class="form-group">
+													<!-- <div class="form-group">
 														<label for="sTate">Adelanto</label>
 														<input type="number" min="0" value="0" class="form-control" name="rxade">
-													</div>
+													</div> -->
 
 												</div>
 												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">

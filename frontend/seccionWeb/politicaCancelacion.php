@@ -2,43 +2,25 @@
 <section class="page-section bg-light" id="team">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Política de Cancelaciones</h2>
+            <h3 class="section-subheading text-muted">CANCELACIÓN DE HOSPEDAJE.</h3>
         </div>
         <div class="row">
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="BackWeb/assets/img/team/1.jpg" alt="..." />
-                    <h4>Parveen Anand</h4>
-                    <p class="text-muted">Lead Designer</p>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="large text-muted">
+                    Antes de realizar su reservación y pago anticipado del servicio de hospedaje, le sugerimos tener en cuenta las siguientes políticas de cancelación.
+                    <br>
+                    Toda solicitud de cancelación debe ser informada por escrito vía correo electrónico al siguiente correo: (CORREO)
+                    <br>
+                    Las reservaciones individuales pueden ser canceladas sin incurrir en ningún cargo siempre y cuando dicha reservación sea cancelada con 24 hrs. de anticipación. Si la reservación es cancelada en un lapso de tiempo menor a 24 hrs. previas a la hora establecida de check-in (15:00 hrs, 3:00 p.m.) El huésped o grupo incurrirá en un cargo equivalente a la primera noche de estancia.
+                    <br>
+                    Las reservaciones de grupo o por un número de noches mayor a 7 días deberán ser canceladas por lo menos con 3 días de anticipación. Si la reservación es cancelada en un lapso de tiempo menor a 72 hrs. previas a la hora establecida de check-in (15:00 hrs.) El huésped o grupo incurrirá en un cargo equivalente a la primera noche de estancia.
+                    <br>
+                    No existen reembolsos por salidas anticipadas.
+                    <br>
+                    Hotel La Casa de Piedra se reserva el derecho de rechazar a cualquier cliente en cualquier momento si éste no cumple con el Reglamento Interno de Hospedaje.
+                </p>
             </div>
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="BackWeb/assets/img/team/2.jpg" alt="..." />
-                    <h4>Diana Petersen</h4>
-                    <p class="text-muted">Lead Marketer</p>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="BackWeb/assets/img/team/3.jpg" alt="..." />
-                    <h4>Larry Parker</h4>
-                    <p class="text-muted">Lead Developer</p>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
         </div>
     </div>
 </section>

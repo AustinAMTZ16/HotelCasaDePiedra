@@ -1,5 +1,5 @@
 <?php
-    require_once('../../backend/config/ConexionSNSesion.php');
+    require_once('backend/config/ConexionSNSesion.php');
 if(isset($_POST['md_insert'])){
 ///////////// Informacion enviada por el formulario /////////////
     $numc=$_POST['mdnum'];

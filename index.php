@@ -54,7 +54,7 @@
                             echo "<h1>404 PAGINA NO ENCONTRADA</h1>";
                         }
                     } else {
-                        include "./frontend/seccionWeb/home.html";
+                        include "./frontend/seccionWeb/home.php";
                     }
                     ?>
                 </div>

@@ -71,17 +71,17 @@
 									<div class="row gutters">
 
 										<?php
-														// require the database connection
-														require 'backend/config/ConexionSNSesion.php';
-														if (isset($_POST['search'])) {
-														?>
+											// require the database connection
+											require 'backend/config/ConexionSNSesion.php';
+											if (isset($_POST['search'])) {
+										?>
 
 										<?php
-															$keyword = $_POST['keyword'];
-															$query = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc WHERE `numiha` LIKE '%$keyword%' or `nompis` LIKE '%$keyword%' or `nomhc` LIKE '%$keyword%' or  `estadha` LIKE '%$keyword%'  GROUP BY habitaciones.idhab");
-															$query->execute();
-															while ($row = $query->fetch()) {
-															?>
+											$keyword = $_POST['keyword'];
+											$query = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc WHERE `numiha` LIKE '%$keyword%' or `nompis` LIKE '%$keyword%' or `nomhc` LIKE '%$keyword%' or  `estadha` LIKE '%$keyword%'  GROUP BY habitaciones.idhab");
+											$query->execute();
+											while ($row = $query->fetch()) {
+										?>
 
 										<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
 											<div class="doc-block">
@@ -95,7 +95,7 @@
 												<?php
 
 													if ($row->estadha == '1') {
-														echo '<a href="index.php?view=mostrar?id='. $row->idhab . '" class="btn btn-white btn-lg">Disponible</a>';
+														echo '<a href="index.php?view=mostrar.php" class="btn btn-white btn-lg">Disponible</a>';
 														// code...
 													} else if ($row->estadha == '2') {
 														//echo '<button class="btn btn-white btn-lg">Ocupado</button>';
@@ -111,20 +111,20 @@
 										</div>
 
 										<?php
-															}
-															?>
+											}
+										?>
 
 										<?php
-														} else {
-														?>
+											} else {
+										?>
 
 										<?php
-															$query = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc GROUP BY habitaciones.idhab");
-															$query->execute();
-															while ($row = $query->fetch()) {
+											$query = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc GROUP BY habitaciones.idhab");
+											$query->execute();
+											while ($row = $query->fetch()) {
 
 
-															?>
+										?>
 										<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
 											<div class="doc-block">
 												<div class="doc-icon">
@@ -137,13 +137,13 @@
 												<?php
 
 													if ($row->estadha == 1) {
-														echo '<a href="index.php?view=mostrar?id='. $row->idhab . '" class="btn btn-white btn-lg">Disponible</a>';
+														echo '<a href="index.php?view=mostrar" class="btn btn-white btn-lg">Disponible</a>';
 														// code...
 													} else if ($row->estadha == 2) {
 														//echo '<button class="btn btn-white btn-lg">Ocupado</button>';
-														echo '<a href="../rs_habitacion/ocupado.php?id=' . $row->idhab . '" class="btn btn-white btn-lg">Ocupado</a>';
+														echo '<a href="#" class="btn btn-white btn-lg">Ocupado</a>';
 													} else {
-														echo '<a href="../rs_habitacion/limpieza.php?id=' . $row->idhab . '" class="btn btn-white btn-lg">Limpieza</a>';
+														echo '<a href="#" class="btn btn-white btn-lg">Limpieza</a>';
 														//echo '<button class="btn btn-white btn-lg">Limpieza</button>';
 													}
 												?>
@@ -154,13 +154,13 @@
 
 
 										<?php
-															}
-															?>
+											}
+										?>
 
 										<?php
-														}
-														$conn = null;
-														?>
+											}
+											$conn = null;
+										?>
 									</div>
 									<!-- Row end -->
 								</div>
