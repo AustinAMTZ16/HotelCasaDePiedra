@@ -58,7 +58,18 @@
                     }
                     ?>
                 </div>
-
+            </div>
+        </div>
+    </div>
+    <div class="paadre">
+        <div class="hijo">
+            <div class="fila">
+                <div class="columna12">
+                    <?php
+                    require('./frontend/seccionWeb/restaurante.php');
+                    require('./frontend/seccionWeb/contacto.php');
+                    ?>
+                </div>
             </div>
         </div>
     </div>
