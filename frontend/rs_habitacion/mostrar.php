@@ -1,9 +1,9 @@
 <?php
-session_start();
+	session_start();
 
-if (!isset($_SESSION['rol'])) {
-	header('location: ../login.php');
-}
+	if (!isset($_SESSION['rol'])) {
+		header('location: ../login.php');
+	}
 ?>
 <!doctype html>
 <html lang="es">
@@ -282,17 +282,17 @@ if (!isset($_SESSION['rol'])) {
 				<!-- Row start -->
 				<div class="row gutters">
 					<?php
-					require '../../backend/config/Conexion.php';
-					$id = $_GET['id'];
-					$sentencia = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc  WHERE idhab= '$id';");
-					$sentencia->execute();
+						require '../../backend/config/Conexion.php';
+						$id = $_GET['id'];
+						$sentencia = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc  WHERE idhab= '$id';");
+						$sentencia->execute();
 
-					$data =  array();
-					if ($sentencia) {
-						while ($r = $sentencia->fetchObject()) {
-							$data[] = $r;
+						$data =  array();
+						if ($sentencia) {
+							while ($r = $sentencia->fetchObject()) {
+								$data[] = $r;
+							}
 						}
-					}
 					?>
 					<?php if (count($data) > 0) : ?>
 						<?php foreach ($data as $d) : ?>
@@ -329,7 +329,7 @@ if (!isset($_SESSION['rol'])) {
 											<div class="row gutters">
 												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 													<div class="form-group">
-														<label for="fullName">DNI del cliente</label><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNewDocument"><i class="icon-plus"></i></button>
+														<label for="fullName">Datos cliente </label><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addNewDocument"><i class="icon-plus"></i></button>
 
 
 														<select class="form-control" name="rxdoc" id="doc" required>

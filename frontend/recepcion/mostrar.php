@@ -1,9 +1,9 @@
 <?php
-session_start();
+	session_start();
 
-if (!isset($_SESSION['rol']) ) {
-	header('location: ../login.php');
-}
+	if (!isset($_SESSION['rol'])) {
+		header('location: ../login.php');
+	}
 ?>
 <!doctype html>
 <html lang="es">
@@ -274,6 +274,7 @@ if (!isset($_SESSION['rol']) ) {
 				</ol>
 			</div>
 			<!-- Page header end -->
+
 			<!-- Main container start -->
 			<!-- Main container start -->
 			<div class="main-container">
@@ -305,6 +306,7 @@ if (!isset($_SESSION['rol']) ) {
 									</div>
 
 								</div>
+								
 								<div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 col-8">
 
 									<div class="documents-container">
@@ -330,16 +332,16 @@ if (!isset($_SESSION['rol']) ) {
 												<div class="row gutters">
 
 													<?php
-													// require the database connection
-													require '../../backend/config/Conexion.php';
-													if (isset($_POST['search'])) {
+														// require the database connection
+														require '../../backend/config/Conexion.php';
+														if (isset($_POST['search'])) {
 													?>
 
 														<?php
-														$keyword = $_POST['keyword'];
-														$query = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc WHERE `numiha` LIKE '%$keyword%' or `nompis` LIKE '%$keyword%' or `nomhc` LIKE '%$keyword%' or  `estadha` LIKE '%$keyword%'  GROUP BY habitaciones.idhab");
-														$query->execute();
-														while ($row = $query->fetch()) {
+															$keyword = $_POST['keyword'];
+															$query = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc WHERE `numiha` LIKE '%$keyword%' or `nompis` LIKE '%$keyword%' or `nomhc` LIKE '%$keyword%' or  `estadha` LIKE '%$keyword%'  GROUP BY habitaciones.idhab");
+															$query->execute();
+															while ($row = $query->fetch()) {
 														?>
 
 															<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">

@@ -133,9 +133,9 @@
 											<div class="form-group">
 												<label for="addRess">Fecha entrada</label>
 												<input type="text" class="form-control" name="rxent" value="
-											<?php $fechaActual = date('Y-m-d');
-											echo $fechaActual;
-											?>">
+												<?php $fechaActual = date('Y-m-d');
+												echo $fechaActual;
+												?>">
 											</div>
 											<div class="form-group">
 												<label for="ciTy">Fecha salida</label>
