@@ -1,0 +1,98 @@
+/* Puede agregar estilos globales a este archivo y también importar otros archivos de estilo*/
+
+  .ubicar-padre{
+    border: solid 2px rgb(230, 58, 58)
+  }
+  .ubicar-hijo{
+    border: solid 2px rgb(96, 215, 59)
+  }
+  .ubicar-fila{
+    border: solid 2px rgb(69, 59, 215)
+  }
+  .padre{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    /* border: black 2px solid; */
+  }
+  .padre-fondo{
+    padding: 10px;
+    /* display: flex; */
+    justify-content: center;
+    background-color: #DDDDDD;
+    border-radius: 20px;
+  }
+  .hijo{
+    width: 90%;
+    padding: 10px;
+    /* border: red 2px solid; */
+  }
+  .fila{
+    display: flex;
+    justify-content: center;
+    /* border: green 2px solid; */
+  }
+  .cent{
+    text-align: center;
+    padding: 20px;
+  }
+  .columna1{
+    width: 8.33%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna2{
+    width: 16.66%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna3{
+    width: 24.99%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna4{
+    width: 33.32%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna5{
+    width: 41.65%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna6{
+    width: 49.98%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna7{
+    width: 58.31%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna8{
+    width: 66.64%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna9{
+    width: 74.97%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna10{
+    width: 83.33%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna11{
+    width: 91.63%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
+  .columna12{
+    width: 100%;
+    padding: 20px;
+    /* border: rgb(155, 158, 155) 2px solid; */
+  }
