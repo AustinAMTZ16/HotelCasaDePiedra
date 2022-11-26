@@ -103,17 +103,17 @@
 			<!-- Row start -->
 			<div class="row gutters">
 				<?php
-				require '../../backend/config/ConexionSNSesion.php';
-				$id = $_GET['id'];
-				$sentencia = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc  WHERE idhab= '$id';");
-				$sentencia->execute();
+					require '../../backend/config/ConexionSNSesion.php';
+					$id = $_GET['id'];
+					$sentencia = $connect->prepare("SELECT habitaciones.idhab, habitaciones.numiha, habitaciones.detaha, habitaciones.precha, pisos.idps, pisos.nompis, hcate.idhc, hcate.nomhc, habitaciones.estadha FROM habitaciones INNER JOIN pisos ON habitaciones.idps =pisos.idps INNER JOIN hcate ON habitaciones.idhc =hcate.idhc  WHERE idhab= '$id';");
+					$sentencia->execute();
 
-				$data =  array();
-				if ($sentencia) {
-					while ($r = $sentencia->fetchObject()) {
-						$data[] = $r;
+					$data =  array();
+					if ($sentencia) {
+						while ($r = $sentencia->fetchObject()) {
+							$data[] = $r;
+						}
 					}
-				}
 				?>
 				<?php if (count($data) > 0) : ?>
 					<?php foreach ($data as $d) : ?>
@@ -158,23 +158,22 @@
 										<div class="row gutters">
 											<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 												<div class="modal-body">
-
 													<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 														<div class="form-group">
-															<label for="docTitle">Documento</label>
+															<label for="docTitle">Datos de usuario</label>
 															<select class="form-control" name="mddoc" required>
-																<option>Seleccione documento</option>
-																<option value="DNI">DNI</option>
-																<option value="PASAPORTE">PASAPORTE</option>
-																<option value="CARNET DE EXTRANJERIA">CARNET DE EXTRANJERIA</option>
+																<option>Seleccione contacto</option>
+																<option value="DNI">Telefono celular</option>
+																<!-- <option value="PASAPORTE">PASAPORTE</option>
+																<option value="CARNET DE EXTRANJERIA">CARNET DE EXTRANJERIA</option> -->
 															</select>
 														</div>
 														<input type="hidden" name="rxha" value="<?php echo $d->idhab; ?>">
 													</div>
 													<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 														<div class="form-group">
-															<label for="dovType">Nº de documento</label>
-															<input type="text" maxlength="14" class="form-control" name="mdnum" placeholder="Nº de documento">
+															<label for="dovType">Numero de contacto</label>
+															<input type="text" maxlength="10" class="form-control" name="mdnum" placeholder="Telefono">
 														</div>
 													</div>
 
@@ -192,65 +191,51 @@
 															<input type="text" class="form-control" name="mdap" placeholder="Apellido del cliente">
 														</div>
 													</div>
+												</div>
+											</div>
+											<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+												<div class="form-group">
+													<label for="addRess">Fecha entrada</label>
+													<input type="text" class="form-control" name="rxent" value="
+																<?php $fechaActual = date('Y-m-d');
+																echo $fechaActual;
+																?>">
+												</div>
+												<div class="form-group">
+													<label for="ciTy">Fecha salida</label>
+													<input type="date" class="form-control" required name="rxsal">
+												</div>
+												<div class="form-group">
+													<label for="sTate">Precio</label>
+													<input type="text" class="form-control" value="<?php echo $d->precha; ?>" readonly>
+												</div>
+												<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+													<div class="form-group">
+														<label for="sTate">Observaciones</label>
+														<textarea class="form-control" name="rxobs" rows="3"></textarea>
 
-
-
-
+													</div>
+												</div>
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+												<div class="text-right">
+													<div class="text-right">
+														<button type="submit" name="md_insert" class="btn btn-secondary">Alta</button>
+													</div>
+												</div>
+											</div>
+										</div>
 									</form>
-								</div>
-
-
-
-							</div>
-
-							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-								<div class="form-group">
-									<label for="addRess">Fecha entrada</label>
-									<input type="text" class="form-control" name="rxent" value="
-												<?php $fechaActual = date('Y-m-d');
-												echo $fechaActual;
-												?>">
-								</div>
-								<div class="form-group">
-									<label for="ciTy">Fecha salida</label>
-									<input type="date" class="form-control" required name="rxsal">
-								</div>
-								<div class="form-group">
-									<label for="sTate">Precio</label>
-									<input type="text" class="form-control" value="<?php echo $d->precha; ?>" readonly>
-								</div>
-
-
-								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-									<div class="form-group">
-										<label for="sTate">Observaciones</label>
-										<textarea class="form-control" name="rxobs" rows="3"></textarea>
-
-									</div>
-								</div>
-
-							</div>
-							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-								<div class="text-right">
-
-									<div class="text-right">
-										<button type="submit" name="md_insert" class="btn btn-secondary">Alta</button>
-									</div>
 								</div>
 							</div>
 						</div>
-						</form>
+					<?php endforeach; ?>
+				<?php else : ?>
+					<p class="alert alert-warning">No hay datos</p>
+				<?php endif; ?>
 			</div>
+			<!-- Row end -->
 		</div>
-		</div>
-	<?php endforeach; ?>
-<?php else : ?>
-	<p class="alert alert-warning">No hay datos</p>
-<?php endif; ?>
-</div>
-<!-- Row end -->
-
-</div>
 	</section>
 	<!-- Main container end -->
 
