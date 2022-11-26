@@ -220,7 +220,7 @@
 											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 												<div class="text-right">
 													<div class="text-right">
-														<button type="submit" name="md_insert" class="btn btn-secondary">Alta</button>
+														<button type="submit" name="md_insert" class="btn btn-secondary">Reservar ahora</button>
 													</div>
 												</div>
 											</div>
