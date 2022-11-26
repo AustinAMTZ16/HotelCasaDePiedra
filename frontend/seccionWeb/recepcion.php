@@ -136,8 +136,9 @@
 
 												<?php
 
+
 													if ($row->estadha == 1) {
-														echo '<a href="index.php?view=mostrar" class="btn btn-white btn-lg">Disponible</a>';
+														echo '<a href="frontend/seccionWeb/mostrar.php?id=' . $row->idhab . '" class="btn btn-white btn-lg">Disponible</a>';
 														// code...
 													} else if ($row->estadha == 2) {
 														//echo '<button class="btn btn-white btn-lg">Ocupado</button>';

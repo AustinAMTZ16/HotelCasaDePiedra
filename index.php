@@ -80,6 +80,7 @@
             <div class="fila">
                 <div class="columna12">
                     <?php
+                    // mostrar.php
                     if (isset($_GET["view"]) && $_GET["view"] != "") {
                         $url = "frontend/seccionWeb/" . $_GET["view"] . ".php";
                         if (file_exists($url)) {
