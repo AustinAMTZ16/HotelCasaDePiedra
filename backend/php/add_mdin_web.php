@@ -63,9 +63,8 @@
         $fesal=$_POST['rxsal'];
         $observac=$_POST['rxobs'];
         $adel=0.00;
-
         $precioCobro = $_POST['precio'];
-
+        $correo = $_POST['email'];
 
 
         $statement = $connect->prepare("INSERT INTO reservar (idhab,iddn,feentra,fesal,adel,state,observac) VALUES('$idhab', '$iddn','$feentra','$fesal','$adel','1', '$observac')");
@@ -85,7 +84,7 @@
 
         if($inserted>0){
 
-            mail('austintv52@gmail.com', "Contacto", "Hola Mundo");
+            mail($correo, "Hotel Casa de Piedra", 'Su reservacio esta listo un asesor se podrá en contacto.');
         }else{
                 
 
@@ -116,14 +115,25 @@
         }elseif($precioCobro == '450'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
             Pagar Reservación Habitación Doble 4 Persona $450.00 MXN </div>';
-        }
-
-        
-
-
-        
-        
+        } 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -171,4 +181,5 @@
         }
     }
     
+
 ?>
