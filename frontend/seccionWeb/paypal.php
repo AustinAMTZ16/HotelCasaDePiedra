@@ -1,3 +1,4 @@
+<br><br><br><br><br><br><br>
 <div id="smart-button-container">
       <div style="text-align: center;">      
         <div id="paypal-button-container"></div>
@@ -44,3 +45,4 @@
     }
     initPayPalButton();
   </script>
+  
