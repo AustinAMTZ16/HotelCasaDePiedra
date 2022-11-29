@@ -2,12 +2,6 @@
     require_once('../../backend/config/ConexionSNSesion.php');
     
     //RUTA DE ARCHIVO PHPMAILER
-    use PHPMailer\PHPMailer;
-    use PHPMailer\Exception;
-
-    require('../../backend/php/PHPMailer/PHPMailer.php');
-    require('../../backend/php/PHPMailer/SMTP.php');
-    require('../../backend/php/PHPMailer/Exception.php');
 
 
 
@@ -92,13 +86,6 @@
 
             print_r($sql->errorInfo()); 
         }
-
-
-
-
-
-
-
 
         if($precioCobro == '260'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
