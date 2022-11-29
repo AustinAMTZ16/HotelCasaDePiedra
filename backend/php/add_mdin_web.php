@@ -91,7 +91,7 @@
         if($precioCobro == '260'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
             Pagar Reservación Habitación Sencilla 1 Persona $260.00 MXN 
-            <a href="./paypal.php">Pagar Ahora</a>
+            <a href="index.php?view=paypal">Pagar Ahora</a>
             </div>';
         }elseif ($precioCobro == '290'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
