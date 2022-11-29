@@ -79,6 +79,7 @@
         if($inserted>0){
 
             mail($correo, "Hotel Casa de Piedra", 'Su reservacio esta listo un asesor se podrá en contacto.');
+            mail('soporte@hotelcasadepiedra.com', "Hotel Casa de Piedra", 'Su reservacio esta listo un asesor se podrá en contacto.');
         }else{
                 
 
