@@ -191,6 +191,12 @@
 															<input type="text" class="form-control" name="mdap" placeholder="Apellido del cliente">
 														</div>
 													</div>
+													<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+														<div class="form-group">
+															<label for="dovType">Correo Electronico</label>
+															<input type="email" class="form-control" name="email" placeholder="Correo Electronico">
+														</div>
+													</div>
 												</div>
 											</div>
 											<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -207,7 +213,7 @@
 												</div>
 												<div class="form-group">
 													<label for="sTate">Precio</label>
-													<input type="text" class="form-control" value="<?php echo $d->precha; ?>" readonly>
+													<input type="text" class="form-control" name="precio" value="<?php echo $d->precha; ?>" readonly>
 												</div>
 												<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 													<div class="form-group">

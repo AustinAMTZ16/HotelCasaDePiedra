@@ -1,5 +1,13 @@
 <?php
     require_once('../../backend/config/ConexionSNSesion.php');
+    // require_once('../../backend/PHPMailer/PHPMailer.php');
+    // require_once('../../backend/PHPMailer/SMTP.php');
+    // require_once('../../backend/PHPMailer/Exception.php');
+    //RUTA DE ARCHIVO PHPMAILER
+    use PHPMailer\PHPMailer;
+    use PHPMailer\SMTP;
+    use PHPMailer\Exception;
+
     if (isset($_POST['md_insert'])) {
         ///////////// Informacion enviada por el formulario /////////////
         $numc = $_POST['mdnum'];
@@ -53,6 +61,8 @@
         $observac=$_POST['rxobs'];
         $adel=0.00;
 
+        $precioCobro = $_POST['precio'];
+
 
 
         $statement = $connect->prepare("INSERT INTO reservar (idhab,iddn,feentra,fesal,adel,state,observac) VALUES('$idhab', '$iddn','$feentra','$fesal','$adel','1', '$observac')");
@@ -61,6 +71,9 @@
 
         $statement2 = $connect->prepare("UPDATE habitaciones SET estadha='2' WHERE idhab= $idhab LIMIT 1;");
 
+
+       
+       
         //echo "$item";
         //Execute the statement and insert our values.
         $inserted = $statement->execute(); 
@@ -69,20 +82,90 @@
 
         if($inserted>0){
 
-                echo '  <script type="text/javascript">
-                            swal("¡Registrado!", "Agregado correctamente", "success").then(function() {
-                            window.location = "../recepcion/mostrar.php";});
-                        </script>';
+            echo ' ';
         }else{
                 
 
-            echo '  <script type="text/javascript">
-                        swal("Error!", "No se pueden agregar datos,  comuníquese con el administrador ", "error").then(function() {
-                            window.location = "../recepcion/mostrar.php";
-                        });
-                    </script>';
+            echo '  ';
 
             print_r($sql->errorInfo()); 
         }
+
+
+
+
+
+
+
+
+        if($precioCobro == '260'){
+            echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Pagar Reservación Habitación Sencilla 1 Persona $260.00 MXN </div>';
+        }elseif ($precioCobro == '290'){
+            echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Pagar Reservación Habitación Sencilla 2 Persona $290.00 MXN </div>';
+        }elseif($precioCobro == '360'){
+            echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Pagar Reservación Habitación Doble 2 Persona $360.00 MXN </div>';
+        }elseif($precioCobro == '420'){
+            echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Pagar Reservación Habitación Doble 3 Persona $420.00 MXN </div>';
+        }elseif($precioCobro == '450'){
+            echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Pagar Reservación Habitación Doble 4 Persona $450.00 MXN </div>';
+        }
+
+        
+
+
+        
+        
     }
+
+
+
+
+    if($_POST['email']){
+        $correo = $_POST['email'];
+        $asunto = 'Notificacion de reservación';
+        $mensaje = 'Reservación agendada';
+
+        $mail = new PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'soporte@hotelcasadepiedra.com';                     //SMTP username
+            $mail->Password   = 'CasaDePiedra-22';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+            //Recipients
+            $mail->setFrom('soporte@hotelcasadepiedra.com', 'Hotel Casa de Piedra');
+            $mail->addAddress('austintv52@gmail.com');     //Add a recipient
+
+            //Attachments
+            // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Notificación reservacion';
+            $mail->Body    = 'Reservación agendada';
+
+            $mail->send();
+
+            echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Se manda por correo electronico indicaciones</div>';
+            
+            ;
+        } catch (Exception $e) {
+            echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Se manda por correo electronico indicaciones {$mail->ErrorInfo} </div>  ';
+        }
+    }
+    
 ?>
