@@ -1,4 +1,6 @@
 <br><br><br><br><br><br><br>
+<h1>Habitación sencilla 1 Persona</h1>
+<h5>$260.00 MXN</h5>
 <div id="smart-button-container">
       <div style="text-align: center;">      
         <div id="paypal-button-container"></div>
