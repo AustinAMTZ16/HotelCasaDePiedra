@@ -1,12 +1,15 @@
 <?php
     require_once('../../backend/config/ConexionSNSesion.php');
-    // require_once('../../backend/PHPMailer/PHPMailer.php');
-    // require_once('../../backend/PHPMailer/SMTP.php');
-    // require_once('../../backend/PHPMailer/Exception.php');
+    
     //RUTA DE ARCHIVO PHPMAILER
     use PHPMailer\PHPMailer;
-    use PHPMailer\SMTP;
     use PHPMailer\Exception;
+
+    require('../../backend/php/PHPMailer/PHPMailer.php');
+    require('../../backend/php/PHPMailer/SMTP.php');
+    require('../../backend/php/PHPMailer/Exception.php');
+
+
 
     if (isset($_POST['md_insert'])) {
         ///////////// Informacion enviada por el formulario /////////////
@@ -82,7 +85,7 @@
 
         if($inserted>0){
 
-            echo ' ';
+            mail('austintv52@gmail.com', "Contacto", "Hola Mundo");
         }else{
                 
 
@@ -134,13 +137,13 @@
 
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $email->SMTPDebug=0;                   //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'soporte@hotelcasadepiedra.com';                     //SMTP username
             $mail->Password   = 'CasaDePiedra-22';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
@@ -164,7 +167,7 @@
             ;
         } catch (Exception $e) {
             echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">
-            Se manda por correo electronico indicaciones {$mail->ErrorInfo} </div>  ';
+            Se manda por correo electronico indicaciones  </div>  '+$mail->ErrorInfo;
         }
     }
     
