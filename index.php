@@ -142,6 +142,141 @@
     <!-- Slimscroll JS -->
     <script src="backend/vendor/slimscroll/slimscroll.min.js"></script>
     <script src="backend/vendor/slimscroll/custom-scrollbar.js"></script>
+
+
+
+
+
+    <!-- FORMULARIO INDEX CONTACTO -->
+    <script>
+
+        const d = document,
+        $form = d.querySelector(".crud-form");
+
+        const ajax = (options) => {
+            let {url, method, success, error, data} = options;
+            let xhr = new XMLHttpRequest();
+
+            xhr.addEventListener("readystatechange", e =>{
+                if(xhr.readyState !== 4)return;
+
+                if(xhr.status >= 200 && xhr.status < 300) {
+                    let json = JSON.parse(xhr.responseText);
+                    success(json);
+
+                }else{
+                    let message = xhr.statusText || "Ocurrio un error";
+                    error(`Error ${xhr.status}: ${message}`);
+                }
+            });
+
+            xhr.open(method || "GET", url);
+
+            xhr.setRequestHeader("Content-type","application/json; charset=utf-8");
+            xhr.send(JSON.stringify(data));
+            
+        }
+
+        d.addEventListener("submit", e => {
+                if(e.target === $form) {
+                    e.preventDefault();
+                    if(!e.target.id.value) {
+                        //Create POST
+                        ajax({
+                            url: "https://api.dck.com.mx/prospecto/agregar.php",
+                            method: "POST",
+                            success: (res) => location.reload(),
+                            error: () => $form.insertAdjacentHTML("aftered", `<p><b>${err}</b></p>`),
+                            data:{
+                                nombre:e.target.nombre.value,
+                                telefono:e.target.telefono.value,
+                                correo:e.target.correo.value,
+                                mensaje:e.target.mensaje.value,
+                                asunto:e.target.asunto.value,
+                                dominioOrigen:e.target.dominioOrigen.value,
+                                giroDominio:e.target.giroDominio.value,
+                                categoriaProspecto:e.target.categoriaProspecto.value,
+                                estadoSistema:e.target.estadoSistema.value,
+                                conversacion:e.target.conversacion.value     
+                            }
+
+                        });
+                    }else{
+                        //Update PUT
+                    }
+                }
+        });
+
+        
+    </script>
+
+    <!-- FORMULARIO CITA -->
+    <script>        
+        const cita = document,
+        $form_cita = cita.querySelector(".cita-form");
+
+        const ajax_cita = (options) => {
+            let {url, method, success, error, data} = options;
+            let xhr_cita = new XMLHttpRequest();
+
+            xhr_cita.addEventListener("readystatechange", e =>{
+                if(xhr_cita.readyState !== 4)return;
+
+                if(xhr_cita.status >= 200 && xhr_cita.status < 300) {
+                    let json = xhr_cita.responseText;
+                    success(json);
+
+                }else{
+                    let message = xhr_cita.statusText || "Ocurrio un error";
+                    error(`Error ${xhr_cita.status}: ${message}`);
+                }
+            });
+
+            xhr_cita.open(method || "GET", url);
+
+            xhr_cita.setRequestHeader("Content-type","application/json; charset=utf-8");
+            xhr_cita.send(JSON.stringify(data));
+            
+        }
+
+        cita.addEventListener("submit", e => {
+            // var boton_cita = d.getElementById('boton_cita');
+            // var mensaje = d.querySelectorAll('.valores');
+
+                if(e.target === $form_cita) {
+                    e.preventDefault();
+                    if(!e.target.id.value) {
+                        //Create POST
+                        ajax_cita({
+                            url: "https://api.dck.com.mx/prospecto/agregar.php",
+                            method: "POST",
+                            success: (res) => location.reload(),
+                            error: () => $form_cita.insertAdjacentHTML("aftered", `<p><b>${err}</b></p>`),
+                            data:{
+                                nombre:e.target.nombre.value,
+                                telefono:e.target.telefono.value,
+                                correo:e.target.correo.value,
+                                asunto:e.target.asunto.value,
+                                dominioOrigen:e.target.dominioOrigen.value,
+                                giroDominio:e.target.giroDominio.value,
+                                categoriaProspecto:e.target.categoriaProspecto.value,
+                                estadoSistema:e.target.estadoSistema.value,
+                                conversacion:e.target.conversacion.value,
+                                mensajes_cita:e.target.mensajes_cita.value,
+                                fecha:e.target.fecha.value,
+                                pacas:e.target.pacas.value,
+                                ubicacion:e.target.ubicacion.value,
+                                mensaje:e.target.fecha.value+" "+e.target.pacas.value+" "+e.target.ubicacion.value+" "+e.target.mensajes_cita.value
+                            }
+
+                        });
+                    }else{
+                        //Update PUT
+                    }
+                }
+        });
+    </script>
+
 </body>
 
 </html>

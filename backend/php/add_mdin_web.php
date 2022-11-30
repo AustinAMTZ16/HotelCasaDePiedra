@@ -79,7 +79,7 @@
         if($inserted>0){
 
             mail($correo, "Hotel Casa de Piedra", 'Su reservacio esta listo un asesor se podrá en contacto.');
-            mail('soporte@hotelcasadepiedra.com', "Hotel Casa de Piedra", 'Su reservacio esta listo un asesor se podrá en contacto.');
+            mail('soporte@hotelcasadepiedra.com', "Hotel Casa de Piedra", 'El sistema detecto una resevacion por favor de revisar el sistema de gestion del hotel');
         }else{
                 
 
@@ -91,20 +91,28 @@
         if($precioCobro == '260'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
             Pagar Reservación Habitación Sencilla 1 Persona $260.00 MXN 
-            <a href="../../index.php?view=paypal">Pagar Ahora</a>
+            <a href="../../index.php?view=paypal260">Pagar Ahora</a>
             </div>';
         }elseif ($precioCobro == '290'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
-            Pagar Reservación Habitación Sencilla 2 Persona $290.00 MXN </div>';
+            Pagar Reservación Habitación Sencilla 2 Persona $290.00 MXN 
+            <a href="../../index.php?view=paypal290">Pagar Ahora</a>
+            </div>';
         }elseif($precioCobro == '360'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
-            Pagar Reservación Habitación Doble 2 Persona $360.00 MXN </div>';
+            Pagar Reservación Habitación Doble 2 Persona $360.00 MXN 
+            <a href="../../index.php?view=paypal360">Pagar Ahora</a>
+            </div>';
         }elseif($precioCobro == '420'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
-            Pagar Reservación Habitación Doble 3 Persona $420.00 MXN </div>';
+            Pagar Reservación Habitación Doble 3 Persona $420.00 MXN 
+            <a href="../../index.php?view=paypal420">Pagar Ahora</a>
+            </div>';
         }elseif($precioCobro == '450'){
             echo '  <div class="alert alert-primary alert-dismissible fade show" role="alert">
-            Pagar Reservación Habitación Doble 4 Persona $450.00 MXN </div>';
+            Pagar Reservación Habitación Doble 4 Persona $450.00 MXN 
+            <a href="../../index.php?view=paypal450">Pagar Ahora</a>
+            </div>';
         } 
     }
 ?>

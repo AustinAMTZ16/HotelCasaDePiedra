@@ -14,16 +14,16 @@
 							<label for="docTitle">Documento</label>
 							<select class="form-control" name="mddoc" required>
 								<option>Seleccione documento</option>
-								<option value="DNI">DNI</option>
-								<option value="PASAPORTE">PASAPORTE</option>
-								<option value="CARNET DE EXTRANJERIA">CARNET DE EXTRANJERIA</option>
+								<option value="DNI">Telefono</option>
+								<!-- <option value="PASAPORTE">PASAPORTE</option>
+								<option value="CARNET DE EXTRANJERIA">CARNET DE EXTRANJERIA</option> -->
 							</select>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div class="form-group">
-							<label for="dovType">Nº de documento</label>
-							<input type="text" maxlength="14" class="form-control" name="mdnum" placeholder="Nº de documento">
+							<label for="dovType">Nº de Telefono</label>
+							<input type="text" maxlength="14" class="form-control" name="mdnum" placeholder="Nº de Telefono">
 						</div>
 					</div>
 

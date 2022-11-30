@@ -91,7 +91,9 @@
 
 												<div class="doc-title">N°:
 													<?php echo $row->numiha; ?>
+													<?php echo $row->numiha; ?>
 												</div>
+												
 												<?php
 
 													if ($row->estadha == '1') {
@@ -132,6 +134,9 @@
 												</div>
 												<div class="doc-title">N°:
 													<?php echo $row->numiha; ?>
+												</div>
+												<div class="doc-title">
+													<?php echo $row->detaha; ?>
 												</div>
 
 												<?php

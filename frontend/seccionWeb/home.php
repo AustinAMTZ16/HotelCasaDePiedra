@@ -18,35 +18,26 @@
             
         </div>
         <div class="row text-center">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <!-- <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x "></i>
                     <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                 </span>                -->
                 <img src="BackWeb/assets/img/habitaciones/sencilla.jpg" class="card-img-top" alt="">
                 <h4 class="my-3">Habitación sencilla</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                    architecto quo inventore harum ex magni, dicta impedit.</p>
+                <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                    architecto quo inventore harum ex magni, dicta impedit.</p> -->
             </div>
-            <div class="col-md-4">
-                <!-- <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x "></i>
-                    <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                </span> -->
-                <img src="BackWeb/assets/img/habitaciones/doble.jpg" class="card-img-top" alt="">
-                <h4 class="my-3">Habitación doble</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                    architecto quo inventore harum ex magni, dicta impedit.</p>
-            </div>
-            <div class="col-md-4">
+            
+            <div class="col-md-6">
                 <!-- <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x "></i>
                     <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                 </span> -->
                 <img src="BackWeb/assets/img/habitaciones/premium.jpg" class="card-img-top" alt="">
-                <h4 class="my-3">Habitación premium</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                    architecto quo inventore harum ex magni, dicta impedit.</p>
+                <h4 class="my-3">Habitación Suite</h4>
+                <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                    architecto quo inventore harum ex magni, dicta impedit.</p> -->
             </div>
         </div>
     </div>

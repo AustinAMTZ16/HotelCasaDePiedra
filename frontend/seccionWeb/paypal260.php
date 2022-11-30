@@ -1,8 +1,8 @@
 <br><br><br><br><br><br><br>
-<h1>Habitación sencilla 1 Persona</h1>
+<h1>Pagar Reservación Habitación Sencilla 1 Persona</h1>
 <h5>$260.00 MXN</h5>
 <div id="smart-button-container">
-      <div style="text-align: center;">      
+      <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
     </div>
@@ -20,7 +20,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"MXN","value":260}}]
+            purchase_units: [{"description":"Reservación Habitación Doble 2 Persona","amount":{"currency_code":"MXN","value":260}}]
           });
         },
 
@@ -47,4 +47,3 @@
     }
     initPayPalButton();
   </script>
-  
