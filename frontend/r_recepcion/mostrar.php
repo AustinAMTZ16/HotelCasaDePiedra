@@ -108,10 +108,10 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
 						</li>
 
 
-						<li class="sidebar-dropdown">
+						<!-- <li class="sidebar-dropdown">
 							<a href="#">
 								<i class="icon-archive"></i>
-								<span class="menu-text">Tienda</span>
+								<span class="menu-text">|</span>
 							</a>
 							<div class="sidebar-submenu">
 								<ul>
@@ -127,7 +127,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
 
 								</ul>
 							</div>
-						</li>
+						</li> -->
 
 						<li class="sidebar-dropdown">
 							<a href="#">
