@@ -183,7 +183,7 @@
                     if(!e.target.id.value) {
                         //Create POST
                         ajax({
-                            url: "https://leadapi.institutok29.com/prospecto/agregar.php",
+                            url: "https://mexiclientes.engranetmx.com/prospecto/agregar.php",
                             method: "POST",
                             success: (res) => location.reload(),
                             error: () => $form.insertAdjacentHTML("aftered", `<p><b>${err}</b></p>`),
@@ -248,7 +248,7 @@
                     if(!e.target.id.value) {
                         //Create POST
                         ajax_cita({
-                            url: "https://leadapi.institutok29.com/prospecto/agregar.php",
+                            url: "https://mexiclientes.engranetmx.com/prospecto/agregar.php",
                             method: "POST",
                             success: (res) => location.reload(),
                             error: () => $form_cita.insertAdjacentHTML("aftered", `<p><b>${err}</b></p>`),
